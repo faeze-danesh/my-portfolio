@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar__logo">Faeze</div>
+      <div className="navbar__logo">Faeze Danesh</div>
 
       <ul className="navbar__links">
         <li className={active === "home" ? "active" : ""}>

@@ -11,11 +11,11 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1>Hi, I'm Faeze</h1>
-        <h2>Frontend Developer</h2>
+        <h1>Faeze Danesh</h1>
+        <h2>Junior Full Stack Developer</h2>
 
         <p>
-          I build modern and responsive web applications with React and SCSS.
+          I am a passionate junior full stack developer with a strong focus on building dynamic and responsive web applications. My expertise lies in front-end technologies like React and TailwindCSS, alongside back-end technologies like Node.js, Express.js, and MongoDB. I am dedicated to crafting user-friendly solutions that combine functionality with modern design to deliver exceptional user experiences.
         </p>
 
         <div className="hero__buttons">
