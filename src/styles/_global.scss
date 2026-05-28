@@ -9,3 +9,6 @@ body {
   background: $dark;
   color: $light;
 }
+html {
+  scroll-behavior: smooth;
+}

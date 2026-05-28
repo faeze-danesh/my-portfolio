@@ -1,0 +1,52 @@
+.skills {
+  padding: 100px 60px;
+  background: #111;
+  color: white;
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #6c5ce7;
+    margin-bottom: 40px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  &__item {
+    background: #1a1a2e;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    transition: 0.3s;
+    font-size: 1rem;
+
+    &:hover {
+      transform: translateY(-5px);
+      background: #6c5ce7;
+    }
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .skills {
+    padding: 60px 20px;
+  }
+
+  .skills__grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+  }
+
+  .skills__item {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+}

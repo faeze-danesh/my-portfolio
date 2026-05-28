@@ -52,3 +52,20 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    &__buttons {
+      flex-direction: column;
+    }
+  }
+}

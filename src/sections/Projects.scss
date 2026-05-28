@@ -1,0 +1,91 @@
+.projects {
+  padding: 100px 60px;
+  background: #0f0f0f;
+  color: white;
+
+  h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: #6c5ce7;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  &__card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-10px);
+      border-color: #6c5ce7;
+      box-shadow: 0 10px 30px rgba(108, 92, 231, 0.2);
+    }
+
+    h3 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #b2b2b2;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+  }
+
+  &__tag {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+    background: #6c5ce7;
+    border-radius: 20px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+
+    a {
+      flex: 1;
+      text-align: center;
+      padding: 8px;
+      font-size: 0.8rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    a:first-child {
+      border: 1px solid #ffffff55;
+      color: white;
+
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
+
+    a:last-child {
+      background: #6c5ce7;
+      color: white;
+
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+  }
+}
