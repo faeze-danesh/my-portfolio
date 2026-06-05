@@ -15,7 +15,9 @@ const About = () => {
         <h2>About Me</h2>
 
         <p>
-          I’m a Frontend Developer focused on building modern, responsive web applications.
+          I am a Junior Full Stack Developer with experience in React.js,
+            Next.js, Node.js, and npm. I enjoy building modern, responsive,
+            and user-friendly web applications.
         </p>
 
       </motion.div>

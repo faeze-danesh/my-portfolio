@@ -1,28 +1,47 @@
 import "./Hero.scss";
 import { motion } from "framer-motion";
+import profileImage from "../assets/profile.jpg";
 
 const Hero = () => {
   return (
     <section className="hero" id="home">
 
-      <motion.div
-        className="hero__content"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h1>Faeze Danesh</h1>
-        <h2>Junior Full Stack Developer</h2>
+      <div className="hero__container">
 
-        <p>
-          I am a passionate junior full stack developer with a strong focus on building dynamic and responsive web applications. My expertise lies in front-end technologies like React and TailwindCSS, alongside back-end technologies like Node.js, Express.js, and MongoDB. I am dedicated to crafting user-friendly solutions that combine functionality with modern design to deliver exceptional user experiences.
-        </p>
+        {/* LEFT SIDE */}
+        <motion.div
+          className="hero__content"
+          initial={{ opacity: 0, x: -60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1>Faeze Danesh</h1>
 
-        <div className="hero__buttons">
-          <button>View Projects</button>
-          <button>Contact Me</button>
-        </div>
-      </motion.div>
+          <h2>Junior Full Stack Developer</h2>
+
+          <p>
+            I am a Junior Full Stack Developer with experience in React.js,
+            Next.js, Node.js, and npm. I enjoy building modern, responsive,
+            and user-friendly web applications.
+          </p>
+
+          <div className="hero__buttons">
+            <a href="#projects">View Projects</a>
+            <a href="#contact">Contact Me</a>
+          </div>
+        </motion.div>
+
+        {/* RIGHT SIDE */}
+        <motion.div
+          className="hero__image"
+          initial={{ opacity: 0, x: 60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <img src={profileImage} alt="Faeze Danesh" />
+        </motion.div>
+
+      </div>
 
     </section>
   );

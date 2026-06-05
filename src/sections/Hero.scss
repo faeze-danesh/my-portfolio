@@ -1,71 +1,127 @@
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
+  padding: 0 60px;
+  background: #0f0f0f;
   color: white;
-  text-align: center;
 
+  &__container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+  }
+
+  /* LEFT SIDE */
   &__content {
-    max-width: 700px;
+    flex: 1;
+
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #6c5ce7;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #b2b2b2;
+      line-height: 1.8;
+      max-width: 550px;
+      margin-bottom: 30px;
+    }
   }
 
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    color: #6c5ce7;
-    margin-bottom: 20px;
-  }
-
-  p {
-    color: #b2b2b2;
-    margin-bottom: 30px;
-  }
-
+  /* BUTTONS */
   &__buttons {
     display: flex;
     gap: 15px;
-    justify-content: center;
 
-    button {
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
+    a {
+      padding: 12px 20px;
       border-radius: 8px;
-      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 0.9rem;
     }
 
-    button:first-child {
+    a:first-child {
       background: #6c5ce7;
       color: white;
+
+      &:hover {
+        opacity: 0.85;
+      }
     }
 
-    button:last-child {
-      background: transparent;
-      border: 1px solid white;
+    a:last-child {
+      border: 1px solid #6c5ce7;
       color: white;
+
+      &:hover {
+        background: #6c5ce7;
+      }
+    }
+  }
+
+  /* RIGHT SIDE IMAGE */
+  &__image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 400px;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 20px; // ⭐ گزینه 5 (حرفه‌ای)
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      border: 2px solid rgba(108, 92, 231, 0.3);
+      transition: 0.3s;
+
+      &:hover {
+        transform: scale(1.03);
+        box-shadow: 0 25px 50px rgba(108, 92, 231, 0.2);
+      }
     }
   }
 }
+
+/* 📱 Responsive */
 @media (max-width: 768px) {
   .hero {
-    padding: 20px;
+    padding: 100px 20px 50px;
+
+    &__container {
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 30px;
+    }
+
+    &__image img {
+      width: 280px;
+      height: 350px;
+    }
+
+    &__buttons {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
     h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
 
     h2 {
       font-size: 1.2rem;
-    }
-
-    &__buttons {
-      flex-direction: column;
     }
   }
 }
